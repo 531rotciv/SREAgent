@@ -1,0 +1,5 @@
+accelerate
+fastapi
+transformers
+torch # This will install the latest version of PyTorch compatible with your system, however for GPU acceleration, you may need to install a specific version of PyTorch with CUDA support. Please refer to the official PyTorch installation guide for more details.
+uvicorn

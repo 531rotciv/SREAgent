@@ -1,0 +1,57 @@
+{
+  "services": [
+    {
+      "service": "product-api",
+      "metrics": [
+        {
+          "name": "http.error_rate",
+          "unit": "percent",
+          "points": [
+            { "timestamp": "2026-08-28T09:50:00Z", "value": 0.004 },
+            { "timestamp": "2026-08-28T09:55:00Z", "value": 0.003 },
+            { "timestamp": "2026-08-28T09:58:00Z", "value": 0.006 },
+            { "timestamp": "2026-08-28T09:59:00Z", "value": 0.031 },
+            { "timestamp": "2026-08-28T10:00:00Z", "value": 0.082 },
+            { "timestamp": "2026-08-28T10:01:00Z", "value": 0.117 }
+          ]
+        },
+        {
+          "name": "http.latency.p95",
+          "unit": "milliseconds",
+          "points": [
+            { "timestamp": "2026-08-28T09:50:00Z", "value": 180 },
+            { "timestamp": "2026-08-28T09:55:00Z", "value": 190 },
+            { "timestamp": "2026-08-28T09:58:00Z", "value": 410 },
+            { "timestamp": "2026-08-28T09:59:00Z", "value": 1200 },
+            { "timestamp": "2026-08-28T10:00:00Z", "value": 2800 },
+            { "timestamp": "2026-08-28T10:01:00Z", "value": 3400 }
+          ]
+        },
+        {
+          "name": "cache.hit_rate",
+          "unit": "ratio",
+          "points": [
+            { "timestamp": "2026-08-28T09:50:00Z", "value": 0.94 },
+            { "timestamp": "2026-08-28T09:55:00Z", "value": 0.93 },
+            { "timestamp": "2026-08-28T09:58:00Z", "value": 0.61 },
+            { "timestamp": "2026-08-28T09:59:00Z", "value": 0.22 },
+            { "timestamp": "2026-08-28T10:00:00Z", "value": 0.08 },
+            { "timestamp": "2026-08-28T10:01:00Z", "value": 0.05 }
+          ]
+        },
+        {
+          "name": "cpu_utilization",
+          "unit": "ratio",
+          "points": [
+            { "timestamp": "2026-08-28T09:50:00Z", "value": 0.41 },
+            { "timestamp": "2026-08-28T09:55:00Z", "value": 0.43 },
+            { "timestamp": "2026-08-28T09:58:00Z", "value": 0.58 },
+            { "timestamp": "2026-08-28T09:59:00Z", "value": 0.71 },
+            { "timestamp": "2026-08-28T10:00:00Z", "value": 0.79 },
+            { "timestamp": "2026-08-28T10:01:00Z", "value": 0.82 }
+          ]
+        }
+      ]
+    }
+  ]
+}

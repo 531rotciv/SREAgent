@@ -1,0 +1,76 @@
+{
+  "services": [
+    {
+      "service": "orders-api",
+      "metrics": [
+        {
+          "name": "http.error_rate",
+          "unit": "percent",
+          "points": [
+            { "timestamp": "2026-08-29T15:40:00Z", "value": 0.002 },
+            { "timestamp": "2026-08-29T15:45:00Z", "value": 0.003 },
+            { "timestamp": "2026-08-29T15:49:00Z", "value": 0.009 },
+            { "timestamp": "2026-08-29T15:50:00Z", "value": 0.041 },
+            { "timestamp": "2026-08-29T15:51:00Z", "value": 0.126 }
+          ]
+        },
+        {
+          "name": "http.latency.p95",
+          "unit": "milliseconds",
+          "points": [
+            { "timestamp": "2026-08-29T15:40:00Z", "value": 240 },
+            { "timestamp": "2026-08-29T15:45:00Z", "value": 250 },
+            { "timestamp": "2026-08-29T15:49:00Z", "value": 620 },
+            { "timestamp": "2026-08-29T15:50:00Z", "value": 1800 },
+            { "timestamp": "2026-08-29T15:51:00Z", "value": 4200 }
+          ]
+        },
+        {
+          "name": "db.connection_pool.utilization",
+          "unit": "ratio",
+          "points": [
+            { "timestamp": "2026-08-29T15:40:00Z", "value": 0.52 },
+            { "timestamp": "2026-08-29T15:45:00Z", "value": 0.55 },
+            { "timestamp": "2026-08-29T15:48:00Z", "value": 0.71 },
+            { "timestamp": "2026-08-29T15:49:00Z", "value": 0.87 },
+            { "timestamp": "2026-08-29T15:50:00Z", "value": 1.0 },
+            { "timestamp": "2026-08-29T15:51:00Z", "value": 1.0 }
+          ]
+        },
+        {
+          "name": "db.query.latency.p95",
+          "unit": "milliseconds",
+          "points": [
+            { "timestamp": "2026-08-29T15:40:00Z", "value": 18 },
+            { "timestamp": "2026-08-29T15:45:00Z", "value": 21 },
+            { "timestamp": "2026-08-29T15:49:00Z", "value": 74 },
+            { "timestamp": "2026-08-29T15:50:00Z", "value": 210 },
+            { "timestamp": "2026-08-29T15:51:00Z", "value": 380 }
+          ]
+        },
+        {
+          "name": "cpu_utilization",
+          "unit": "ratio",
+          "points": [
+            { "timestamp": "2026-08-29T15:40:00Z", "value": 0.44 },
+            { "timestamp": "2026-08-29T15:45:00Z", "value": 0.46 },
+            { "timestamp": "2026-08-29T15:49:00Z", "value": 0.68 },
+            { "timestamp": "2026-08-29T15:50:00Z", "value": 0.74 },
+            { "timestamp": "2026-08-29T15:51:00Z", "value": 0.76 }
+          ]
+        },
+        {
+          "name": "request_rate",
+          "unit": "requests_per_second",
+          "points": [
+            { "timestamp": "2026-08-29T15:40:00Z", "value": 410 },
+            { "timestamp": "2026-08-29T15:45:00Z", "value": 418 },
+            { "timestamp": "2026-08-29T15:49:00Z", "value": 415 },
+            { "timestamp": "2026-08-29T15:50:00Z", "value": 421 },
+            { "timestamp": "2026-08-29T15:51:00Z", "value": 419 }
+          ]
+        }
+      ]
+    }
+  ]
+}

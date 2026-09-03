@@ -1,0 +1,94 @@
+{
+  "repositories": [
+    {
+      "repository": "acme/commerce-platform",
+      "service": "checkout-api",
+      "pull_requests": [],
+      "deployments": [],
+      "code_owners": [
+        {
+          "path": "services/checkout/*",
+          "owners": [
+            "@payments-platform",
+            "@checkout-team"
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "acme/payments-platform",
+      "service": "payment-api",
+      "pull_requests": [
+        {
+          "number": 681,
+          "title": "Update payment provider connection handling",
+          "author": {
+            "name": "Priya Shah",
+            "username": "priyashah"
+          },
+          "merged_at": "2026-08-30T17:15:21Z",
+          "merge_commit": "f83a1c2",
+          "files": [
+            {
+              "path": "services/payment/config/production.yaml",
+              "changes": [
+                {
+                  "type": "modified",
+                  "before": "PAYMENT_PROVIDER_HOST: payments.provider.internal",
+                  "after": "PAYMENT_PROVIDER_HOST: payments.provider.prod.internal"
+                }
+              ]
+            },
+            {
+              "path": "services/payment/provider_client.py",
+              "changes": [
+                {
+                  "type": "modified",
+                  "before": "timeout = 2000",
+                  "after": "timeout = 2000"
+                }
+              ]
+            }
+          ],
+          "labels": [
+            "payment-provider",
+            "configuration"
+          ]
+        }
+      ],
+      "deployments": [
+        {
+          "id": 7312,
+          "service": "payment-api",
+          "environment": "production",
+          "commit": "f83a1c2",
+          "status": "success",
+          "deployed_at": "2026-08-30T17:18:00Z"
+        }
+      ],
+      "code_owners": [
+        {
+          "path": "services/payment/*",
+          "owners": [
+            "@payments-platform",
+            "@priyashah"
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "acme/inventory-platform",
+      "service": "inventory-api",
+      "pull_requests": [],
+      "deployments": [],
+      "code_owners": [
+        {
+          "path": "services/inventory/*",
+          "owners": [
+            "@inventory-platform"
+          ]
+        }
+      ]
+    }
+  ]
+}

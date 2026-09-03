@@ -1,0 +1,35 @@
+{
+  "pull_requests": [
+    {
+      "number": 427,
+      "title": "Add loyalty offers to checkout response",
+      "author": {
+        "name": "Mike Torres",
+        "username": "mtorres"
+      },
+      "merged_at": "2026-08-27T16:25:00Z",
+      "merge_commit": "c91de42",
+      "files": [
+        {
+          "path": "services/checkout/offers.py",
+          "changes": [
+            {
+              "type": "added",
+              "after": "for item in cart.items: offers += db.query(Offer).filter_by(product_id=item.product_id).all()"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "deployments": [
+    {
+      "id": 4902,
+      "service": "checkout-api",
+      "environment": "production",
+      "commit": "c91de42",
+      "status": "success",
+      "deployed_at": "2026-08-27T16:27:00Z"
+    }
+  ]
+}

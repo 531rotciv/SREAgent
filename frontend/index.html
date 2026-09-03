@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SRE Alert Frontend</title>
+    <style>
+      :root{
+        --rootly-primary:#6C4FF6;
+        --rootly-bright:#8B5CF6;
+        --rootly-dark:#2B174F;
+        --rootly-accent:#FF8A4C;
+        --rootly-light:#F3EEFF;
+        --rootly-offwhite:#FAF9F7;
+        --rootly-text:#17151C;
+      }
+      html,body{height:100%;margin:0;font-family:Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--rootly-text)}
+      /* top third primary purple, bottom two-thirds light lavender */
+      body{
+        background: linear-gradient(to bottom, var(--rootly-primary) 0 33%, var(--rootly-light) 33% 100%);
+      }
+      #root{height:100%;display:flex;flex-direction:column}
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- React (development builds) via CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="SRE_alert_frontend.js"></script>
+  </body>
+</html>

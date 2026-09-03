@@ -1,0 +1,168 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "get_metrics",
+      "description": "Return metrics for a service within an optional time range, optionally filtered to specific metric names.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "services": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The service names to fetch metrics for."
+          },
+          "start_time": {
+            "type": "string",
+            "description": "Optional start of the time range in ISO-8601 format."
+          },
+          "end_time": {
+            "type": "string",
+            "description": "Optional end of the time range in ISO-8601 format."
+          },
+          "metric_names": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Optional list of metric names to include in the results."
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "search_logs",
+      "description": "Search logs for a service within an optional time range, optionally filtered by log level.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "services": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The service names whose logs should be searched."
+          },
+          "start_time": {
+            "type": "string",
+            "description": "Optional start of the time range in ISO-8601 format."
+          },
+          "end_time": {
+            "type": "string",
+            "description": "Optional end of the time range in ISO-8601 format."
+          },
+          "level": {
+            "type": "string",
+            "description": "Optional log level such as INFO, WARN, or ERROR."
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_recent_deployments",
+      "description": "Return deployments for a service within an optional time range.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "services": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The service names to retrieve deployments for."
+          },
+          "start_time": {
+            "type": "string",
+            "description": "Optional start of the deployment time range in ISO-8601 format."
+          },
+          "end_time": {
+            "type": "string",
+            "description": "Optional end of the deployment time range in ISO-8601 format."
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_recent_pull_requests",
+      "description": "Return pull requests merged within an optional time range for a service.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "services": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The service names whose merged pull requests should be retrieved."
+          },
+          "start_time": {
+            "type": "string",
+            "description": "Optional start of the pull request merged time range in ISO-8601 format."
+          },
+          "end_time": {
+            "type": "string",
+            "description": "Optional end of the pull request merged time range in ISO-8601 format."
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_pull_request",
+      "description": "Return a specific pull request by its pull request number.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "number": {
+            "type": "integer",
+            "description": "The pull request number to retrieve."
+          }
+        },
+        "required": ["number"],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_code_owners_for_path",
+      "description": "Find the code owners responsible for a given repository file path. Optionally filter by one or more services when the same path may exist across multiple services.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file_path": {
+            "type": "string",
+            "description": "The repository file path to find code owners for."
+          },
+          "services": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Optional list of services to restrict the search to."
+          }
+        },
+        "required": ["file_path"],
+        "additionalProperties": false
+      }
+    }
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "repositories": [
+    {
+      "repository": "acme/catalog-platform",
+      "service": "product-api",
+      "pull_requests": [
+        {
+          "number": 427,
+          "title": "Update Redis client configuration",
+          "author": {
+            "name": "Daniel Kim",
+            "username": "danielkim"
+          },
+          "merged_at": "2026-08-28T09:55:41Z",
+          "merge_commit": "c41d92e",
+          "files": [
+            {
+              "path": "services/product/config/production.yaml",
+              "changes": [
+                {
+                  "type": "modified",
+                  "before": "REDIS_URL: redis://cache-prod:6379",
+                  "after": "REDIS_URL: redis://cache-primary:6380"
+                }
+              ]
+            },
+            {
+              "path": "services/product/cache.py",
+              "changes": [
+                {
+                  "type": "modified",
+                  "before": "timeout = 500",
+                  "after": "timeout = 500"
+                }
+              ]
+            }
+          ],
+          "labels": [
+            "redis",
+            "configuration"
+          ]
+        }
+      ],
+      "deployments": [
+        {
+          "id": 5102,
+          "service": "product-api",
+          "environment": "production",
+          "commit": "c41d92e",
+          "status": "success",
+          "deployed_at": "2026-08-28T09:57:00Z"
+        }
+      ],
+      "code_owners": [
+        {
+          "path": "services/product/*",
+          "owners": [
+            "@catalog-platform",
+            "@danielkim"
+          ]
+        }
+      ]
+    }
+  ]
+}

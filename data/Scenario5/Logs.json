@@ -1,0 +1,120 @@
+{
+  "services": [
+    {
+      "service": "checkout-api",
+      "logs": [
+        {
+          "timestamp": "2026-08-30T17:15:00Z",
+          "level": "INFO",
+          "message": "Checkout service healthy",
+          "request_id": null
+        },
+        {
+          "timestamp": "2026-08-30T17:20:12Z",
+          "level": "WARN",
+          "message": "Payment service request exceeded 500ms",
+          "error_type": "DependencyTimeout",
+          "request_id": "req-90012"
+        },
+        {
+          "timestamp": "2026-08-30T17:20:21Z",
+          "level": "WARN",
+          "message": "Payment service returned 502",
+          "error_type": "DependencyError",
+          "request_id": "req-90031"
+        },
+        {
+          "timestamp": "2026-08-30T17:21:02Z",
+          "level": "ERROR",
+          "message": "Checkout failed because payment authorization was unavailable",
+          "error_type": "PaymentDependencyError",
+          "status_code": 502,
+          "request_id": "req-90102"
+        },
+        {
+          "timestamp": "2026-08-30T17:21:14Z",
+          "level": "ERROR",
+          "message": "POST /checkout returned 502",
+          "status_code": 502,
+          "request_id": "req-90119"
+        }
+      ]
+    },
+    {
+      "service": "payment-api",
+      "logs": [
+        {
+          "timestamp": "2026-08-30T17:15:00Z",
+          "level": "INFO",
+          "message": "Payment service healthy",
+          "request_id": null
+        },
+        {
+          "timestamp": "2026-08-30T17:18:00Z",
+          "level": "INFO",
+          "message": "Starting payment-api version f83a1c2",
+          "request_id": null
+        },
+        {
+          "timestamp": "2026-08-30T17:19:11Z",
+          "level": "WARN",
+          "message": "Payment provider connection latency above threshold",
+          "error_type": "ProviderLatencyWarning",
+          "request_id": null
+        },
+        {
+          "timestamp": "2026-08-30T17:19:47Z",
+          "level": "WARN",
+          "message": "Payment provider connection retry initiated",
+          "error_type": "ProviderRetry",
+          "request_id": null
+        },
+        {
+          "timestamp": "2026-08-30T17:20:03Z",
+          "level": "ERROR",
+          "message": "Payment provider connection refused",
+          "error_type": "ProviderConnectionError",
+          "request_id": null
+        },
+        {
+          "timestamp": "2026-08-30T17:20:16Z",
+          "level": "ERROR",
+          "message": "POST /authorize failed because payment provider is unavailable",
+          "error_type": "PaymentProviderUnavailable",
+          "status_code": 502,
+          "request_id": "pay-77121"
+        },
+        {
+          "timestamp": "2026-08-30T17:21:03Z",
+          "level": "ERROR",
+          "message": "Payment authorization failed",
+          "error_type": "AuthorizationDependencyError",
+          "request_id": "pay-77192"
+        }
+      ]
+    },
+    {
+      "service": "inventory-api",
+      "logs": [
+        {
+          "timestamp": "2026-08-30T17:15:00Z",
+          "level": "INFO",
+          "message": "Inventory service healthy",
+          "request_id": null
+        },
+        {
+          "timestamp": "2026-08-30T17:20:00Z",
+          "level": "INFO",
+          "message": "Inventory request latency within normal range",
+          "request_id": null
+        },
+        {
+          "timestamp": "2026-08-30T17:21:00Z",
+          "level": "INFO",
+          "message": "Inventory service healthy",
+          "request_id": null
+        }
+      ]
+    }
+  ]
+}

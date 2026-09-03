@@ -1,0 +1,25 @@
+{
+  "services":[{
+    "service": "checkout-api",
+    "metrics": [
+      {
+        "name": "http.latency.p95",
+        "unit": "milliseconds",
+        "points": [
+          { "timestamp": "2026-08-27T16:20:00Z", "value": 180 },
+          { "timestamp": "2026-08-27T16:25:00Z", "value": 195 },
+          { "timestamp": "2026-08-27T16:28:00Z", "value": 820 },
+          { "timestamp": "2026-08-27T16:30:00Z", "value": 2400 },
+          { "timestamp": "2026-08-27T16:35:00Z", "value": 4800 }
+        ]
+      },
+      {
+        "name": "http.error_rate",
+        "points": [
+          { "timestamp": "2026-08-27T16:20:00Z", "value": 0.002 },
+          { "timestamp": "2026-08-27T16:35:00Z", "value": 0.004 }
+        ]
+      }
+    ]
+  }]
+}

@@ -1,0 +1,25 @@
+{
+  "services":[{
+    "service": "checkout-api",
+    "logs": [
+      {
+        "timestamp": "2026-08-27T16:29:12Z",
+        "level": "WARN",
+        "message": "Slow database query detected",
+        "duration_ms": 812
+      },
+      {
+        "timestamp": "2026-08-27T16:31:44Z",
+        "level": "WARN",
+        "message": "Slow database query detected",
+        "duration_ms": 1240
+      },
+      {
+        "timestamp": "2026-08-27T16:34:09Z",
+        "level": "WARN",
+        "message": "Checkout request waiting on database queries",
+        "duration_ms": 4520
+      }
+    ]
+  }]
+}

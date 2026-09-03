@@ -1,0 +1,39 @@
+{
+    "alert":"C:\\Users\\kevin\\OneDrive\\Documents\\RootlyAgent\\RootlyAgent\\data\\Alert.json",
+    "scenarios":[
+        {
+            "name": "Scenario1",
+            "github": "C:\\Users\\kevin\\OneDrive\\Documents\\RootlyAgent\\RootlyAgent\\data\\Scenario1\\github.json",
+            "logs": "C:\\Users\\kevin\\OneDrive\\Documents\\RootlyAgent\\RootlyAgent\\data\\Scenario1\\Logs.json",
+            "metrics": "C:\\Users\\kevin\\OneDrive\\Documents\\RootlyAgent\\RootlyAgent\\data\\Scenario1\\Metrics.json"
+        },
+        {
+            "name": "Scenario2",
+            "github": "C:\\Users\\kevin\\OneDrive\\Documents\\RootlyAgent\\RootlyAgent\\data\\Scenario2\\github.json",
+            "logs": "C:\\Users\\kevin\\OneDrive\\Documents\\RootlyAgent\\RootlyAgent\\data\\Scenario2\\Logs.json",
+            "metrics": "C:\\Users\\kevin\\OneDrive\\Documents\\RootlyAgent\\RootlyAgent\\data\\Scenario2\\Metrics.json"
+        },
+        {
+            "name": "Scenario3",
+            "github": "C:\\Users\\kevin\\OneDrive\\Documents\\RootlyAgent\\RootlyAgent\\data\\Scenario3\\github.json",
+            "logs": "C:\\Users\\kevin\\OneDrive\\Documents\\RootlyAgent\\RootlyAgent\\data\\Scenario3\\Logs.json",
+            "metrics": "C:\\Users\\kevin\\OneDrive\\Documents\\RootlyAgent\\RootlyAgent\\data\\Scenario3\\Metrics.json"            
+        },
+        {
+            "name": "Scenario4",
+            "github": "C:\\Users\\kevin\\OneDrive\\Documents\\RootlyAgent\\RootlyAgent\\data\\Scenario4\\github.json",
+            "logs": "C:\\Users\\kevin\\OneDrive\\Documents\\RootlyAgent\\RootlyAgent\\data\\Scenario4\\Logs.json",
+            "metrics": "C:\\Users\\kevin\\OneDrive\\Documents\\RootlyAgent\\RootlyAgent\\data\\Scenario4\\Metrics.json"
+        },
+        {
+            "name": "Scenario5",
+            "github": "C:\\Users\\kevin\\OneDrive\\Documents\\RootlyAgent\\RootlyAgent\\data\\Scenario5\\github.json",
+            "logs": "C:\\Users\\kevin\\OneDrive\\Documents\\RootlyAgent\\RootlyAgent\\data\\Scenario5\\Logs.json",
+            "metrics": "C:\\Users\\kevin\\OneDrive\\Documents\\RootlyAgent\\RootlyAgent\\data\\Scenario5//Metrics.json"
+        }
+    ],   
+    "model": {
+        "name": "Qwen/Qwen3-4B-Instruct-2507"
+    }
+
+}

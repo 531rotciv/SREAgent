@@ -1,0 +1,63 @@
+{
+  "alerts":
+  [{
+    "id": "alert-001",
+    "scenario_id": "config_regression",
+    "title": "High error rate in checkout-api",
+    "service": "checkout-api",
+    "severity": "critical",
+    "metric": "http.error_rate",
+    "threshold": 0.05,
+    "current_value": 0.187,
+    "triggered_at": "2026-08-27T14:15:00Z",
+    "description": "Error rate exceeded 5% for checkout-api"
+  },
+  {
+    "id": "alert-002",
+    "scenario_id": "latency_regression",
+    "title": "Checkout latency above SLO",
+    "service": "checkout-api",
+    "severity": "warning",
+    "metric": "http.latency.p95",
+    "threshold": 1000,
+    "current_value": 4800,
+    "triggered_at": "2026-08-27T16:35:00Z",
+    "description": "P95 request latency exceeded 1 second"
+  },
+  {
+    "id": "alert-003",
+    "scenario_id": "cache_regression",
+    "title": "Product API cache failure",
+    "service": "product-api",
+    "severity": "critical",
+    "metric": "http.error_rate",
+    "threshold": 0.05,
+    "current_value": 0.117,
+    "triggered_at": "2026-08-28T10:01:00Z",
+    "description": "Product API error rate exceeded 5% following cache connectivity failures"
+  },
+  {
+    "id": "alert-004",
+    "scenario_id": "database_pool_exhaustion",
+    "title": "Orders API database connection pool exhausted",
+    "service": "orders-api",
+    "severity": "critical",
+    "metric": "http.latency.p95",
+    "threshold": 1000,
+    "current_value": 4200,
+    "triggered_at": "2026-08-29T15:51:00Z",
+    "description": "P95 request latency exceeded 1 second as the database connection pool reached capacity"
+  },
+{
+    "id": "alert-005",
+    "scenario_id": "payment_dependency_failure",
+    "title": "High error rate in checkout-api",
+    "service": "checkout-api",
+    "severity": "critical",
+    "metric": "http.error_rate",
+    "threshold": 0.05,
+    "current_value": 0.191,
+    "triggered_at": "2026-08-30T17:22:00Z",
+    "description": "Checkout error rate exceeded 5% due to payment authorization failures"
+  }] 
+}

@@ -1,0 +1,57 @@
+{
+  "repositories":[{
+    "repository": "acme/commerce-platform",
+    "service": "checkout-api",
+    "pull_requests": [
+      {
+        "number": 391,
+        "title": "Simplify production configuration loading",
+        "author": {
+          "name": "Sarah Chen",
+          "username": "sarahchen"
+        },
+        "merged_at": "2026-08-27T14:10:42Z",
+        "merge_commit": "a82f19c",
+        "files": [
+          {
+            "path": "services/checkout/config/production.yaml",
+            "changes": [
+              {
+                "type": "modified",
+                "before": "DATABASE_URL: ${DATABASE_URL}",
+                "after": "DATABASE_CONFIG: ${DATABASE_CONFIG}"
+              }
+            ]
+          },
+          {
+            "path": "services/checkout/database.py",
+            "changes": [
+              {
+                "type": "modified",
+                "before": "config = os.getenv('DATABASE_URL')",
+                "after": "config = os.getenv('DATABASE_URL')"
+              }
+            ]
+          }
+        ],
+        "labels": ["configuration", "checkout"]
+      }
+    ],
+    "deployments": [
+      {
+        "id": 4821,
+        "service": "checkout-api",
+        "environment": "production",
+        "commit": "a82f19c",
+        "status": "success",
+        "deployed_at": "2026-08-27T14:12:00Z"
+      }
+    ],
+    "code_owners": [
+      {
+        "path": "services/checkout/*",
+        "owners": ["@payments-platform", "@sarahchen"]
+      }
+    ]
+  }]
+}

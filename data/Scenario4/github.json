@@ -1,0 +1,81 @@
+{
+  "repositories": [
+    {
+      "repository": "acme/order-platform",
+      "service": "orders-api",
+      "pull_requests": [
+        {
+          "number": 512,
+          "title": "Increase database connection pool",
+          "author": {
+            "name": "Maya Patel",
+            "username": "mayapatel"
+          },
+          "merged_at": "2026-08-29T15:42:10Z",
+          "merge_commit": "e72b91f",
+          "files": [
+            {
+              "path": "services/orders/config/production.yaml",
+              "changes": [
+                {
+                  "type": "modified",
+                  "before": "DB_POOL_SIZE: 40",
+                  "after": "DB_POOL_SIZE: 20"
+                }
+              ]
+            }
+          ],
+          "labels": [
+            "database",
+            "configuration"
+          ]
+        },
+        {
+          "number": 509,
+          "title": "Optimize order history queries",
+          "author": {
+            "name": "Alex Wong",
+            "username": "alexwong"
+          },
+          "merged_at": "2026-08-29T13:21:04Z",
+          "merge_commit": "d31f802",
+          "files": [
+            {
+              "path": "services/orders/queries/order_history.sql",
+              "changes": [
+                {
+                  "type": "modified",
+                  "before": "SELECT id, status FROM orders WHERE customer_id = ?",
+                  "after": "SELECT id, status, created_at FROM orders WHERE customer_id = ? ORDER BY created_at DESC"
+                }
+              ]
+            }
+          ],
+          "labels": [
+            "database",
+            "performance"
+          ]
+        }
+      ],
+      "deployments": [
+        {
+          "id": 6201,
+          "service": "orders-api",
+          "environment": "production",
+          "commit": "e72b91f",
+          "status": "success",
+          "deployed_at": "2026-08-29T15:48:00Z"
+        }
+      ],
+      "code_owners": [
+        {
+          "path": "services/orders/*",
+          "owners": [
+            "@order-platform",
+            "@mayapatel"
+          ]
+        }
+      ]
+    }
+  ]
+}
