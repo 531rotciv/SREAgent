@@ -63,6 +63,7 @@ class Investigator:
             text="INVESTIGATION STARTED\n"
         ) 
         # Iteratively generates model responses, executes tool calls, and yields progress events until no more tools are requested.
+        # In production environment, you may want to add a maximum iteration limit to prevent infinite loops and ballooning token costs.
         while True:
             yield self.event(
                 "progress",
